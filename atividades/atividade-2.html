@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    
+    <script>
+        // Verificação do número (positivo, negativo ou zero)
+        let numero = -3;
+        
+        if (numero < 0) {
+            console.log("o número é negativo");
+        } else if (numero == 0) {
+            console.log("o número é zero");
+        } else if (numero > 0) {
+            console.log("o número é positivo");
+        } else {
+            console.log("número inválido");
+        }
+
+        // Verificação de par ou ímpar
+        let valor = 25;
+
+        if (valor %2 == 0) {
+            console.log("Par");
+        } else if (typeof valor == "number" && valor %2 != 0) {
+            /* foi usado 'typeof' para verificar se 'valor' é do tipo 'number', 
+            e assim evitar que algo diferte de um número (como "oi", por exemplo), fosse considerado ímpar */
+            console.log("Ímpar");
+        } else {
+            console.log("valor inválido");
+        }
+
+        // Verificação da idade
+        let idade = 25;
+        
+        if (idade < 13) {
+            console.log("Criança");
+        } else if (idade >= 13 && idade < 18) {
+            console.log("Adolescente");
+        } else if (idade > 17 && idade < 60) {
+            console.log("Adulto");
+        } else if (idade >= 60) {
+            console.log("idoso");
+        } else {
+            console.log("idade inválida");
+        }
+
+        // Classificação da nota
+        let nota = 8;
+
+        if (nota <= 2) {
+            console.log("F");
+        } else if (nota <= 4) {
+            console.log("D");
+        } else if (nota <= 6) {
+            console.log("C");
+        } else if (nota <= 8) {
+            console.log("B");
+        } else if (nota <= 10) {
+            console.log("A");
+        } else {
+            console.log("nota inválida");
+        }
+
+        // Dia da semana
+        let diaDaSemana = 5;
+
+        switch (diaDaSemana) {
+            case 1:
+                console.log("Domingo");
+                break;
+            case 2:
+                console.log("Segunda-feira");
+                break;
+            case 3:
+                console.log("Terça-feira");
+                break;
+            case 4:
+                console.log("Quarta-feira");
+                break;
+            case 5:
+                console.log("Quinta-feira");
+                break;
+            case 6:
+                console.log("Sexta-feira");
+                break;
+            case 7:
+                console.log("Sábado");
+                break;
+            default:
+                console.log("dia inválido");
+        }
+
+        // Cálculo de bônus
+        let faturamento = 2500;
+
+        if (faturamento < 1000) {
+            console.log("Sem bônus");
+        } else if (faturamento >= 1000 && faturamento <= 5000) {
+            console.log("Bônus de 5%");
+        } else if (faturamento > 5000) {
+            console.log("Bônus de 10%");
+        } else {
+            console.log("número inválido")
+        }
+
+    </script>
+
+</body>
+</html>
