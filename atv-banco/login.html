@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form class="login">
+        <label class="login" id="labelNome">Digite seu nome:</label>
+        <input type="text" class="login" id="nome">
+        <button onclick="verificaNome()" type="button" class="login">Verificar</button>
+        <div id="containerButton" class="login"></div>
+    </form>
+
+    <script>
+        function verificaNome() {
+            let valorNome = document.getElementById("nome").value;
+            if (valorNome.length == 0) {
+                alert("Por favor, digite seu nome.");
+                return
+            } 
+            let containerButton = document.getElementById("containerButton");
+            containerButton.innerHTML =`
+            <h2 class="menu">Bem-vindo ${valorNome}!!!</h2>
+            <form class="menu">
+                <select class="menu" id="operacao">
+                    <option value="saldo">Saldo</option>
+                    <option value="extrato">Extrato</option>
+                    <option value="saque">Saque</option>
+                    <option value="deposito">Depósito</option>
+                    <option value="transferencia">Transferência</option>
+                </select>
+            <button onclick="menu()" type="button" class="menu">Executar</button>
+    </form>`
+        }
+    </script>
+
+    <script src="/menu-script.js"></script>
+
+</body>
+</html>
